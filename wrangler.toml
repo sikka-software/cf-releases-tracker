@@ -1,0 +1,14 @@
+name = "track-releases"
+main = "src/index.js"
+compatibility_date = "2024-06-25"
+workers_dev = true
+kv_namespaces = [
+  { binding = "REPO_VERSIONS", id = "<YOUR_KV_HERE>" }
+]
+
+[vars]
+DISCORD_WEBHOOK_URL = <YOUR_WEBHOOK_HERE>
+
+[triggers]
+crons = [ "*/1 * * * *" ]
+
