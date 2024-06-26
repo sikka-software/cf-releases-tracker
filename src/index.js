@@ -1,5 +1,3 @@
-// GitHub API base URL
-const GITHUB_API = 'https://api.github.com/repos/';
 // Array of GitHub repositories to monitor
 const WATCHING = [
 	'sikka-software/hawa',
@@ -9,7 +7,7 @@ const WATCHING = [
 async function checkForNewReleases(env) {
 	// Fetch latest releases for all repositories
 	for (const repo of WATCHING) {
-		const response = await fetch(`${GITHUB_API}${repo}/releases/latest`, {
+		const response = await fetch(`https://api.github.com/repos/${repo}/releases/latest`, {
 			headers: {
 				Accept: 'application/vnd.github.v3+json',
 				'User-Agent': 'Cloudflare-Worker',
