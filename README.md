@@ -7,4 +7,10 @@
 
 ## Get Started
 
+1. Update `wrangler.toml`
+- Replace the worker name in line 1
 - Replace `YOUR_DISCORD_WEBHOOK_URL` with your Discord Webhook URL in `wrangler.toml` file.
+- Replace `YOUR_KV_HERE` with the KV id optained from Cloudflare KV Namespace
+
+2. Update `src/index.js`
+- Update the `WATCHING` array to include list of repos to be notified about. In the form of `username/repo` or `org/repo`
